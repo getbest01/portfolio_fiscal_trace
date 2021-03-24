@@ -87,7 +87,7 @@ function App(props) {
 
   //saving transaction list to database [replace table data with transaction list]
   function finishDay() {
-    console.log(JSON.stringify(trx));
+    if (trx.length > 0) {
     fetch("https://jason-11.herokuapp.com/replace", {
       headers: {
        Accept: "application/json",
@@ -105,7 +105,10 @@ function App(props) {
       })
       .catch((e) => {
         console.log(e);
-      });
+      })}
+      else {
+        alert("nothing to save back to DB")
+      }
   }
 
   //New or edit transaction input data check

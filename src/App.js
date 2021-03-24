@@ -4,7 +4,6 @@ import Form from "./components/Form";
 import FilterRadio from "./components/FilterRadio";
 import { nanoid } from "nanoid";
 
-
 const FILTER_MAP = {
   All: () => true,
   Earned: (trx) => trx.fiscalType === "Earned",
@@ -52,7 +51,7 @@ function App(props) {
         inputCheck={inputCheck}
       />
     ));
-  
+
   //# of transactions update
   useEffect(() => {
     if (trx.length - prevTrxLength === -1) {
@@ -87,11 +86,10 @@ function App(props) {
 
   //saving transaction list to database [replace table data with transaction list]
   function finishDay() {
-    if (trx.length > 0) {
     fetch("https://jason-11.herokuapp.com/replace", {
       headers: {
-       Accept: "application/json",
-       "Content-Type": "application/json"
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       method: "POST",
       mode: "cors",
@@ -105,10 +103,7 @@ function App(props) {
       })
       .catch((e) => {
         console.log(e);
-      })}
-      else {
-        alert("nothing to save back to DB")
-      }
+      });
   }
 
   //New or edit transaction input data check

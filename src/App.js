@@ -101,7 +101,7 @@ function App(props) {
         return response.json();
       })
       .then((data) => {
-        console.log(`success Return: ${data}`);
+        alert(data);
       })
       .catch((e) => {
         console.log(e);

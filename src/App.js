@@ -90,6 +90,7 @@ function App(props) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "",
       },
       method: "POST",
       mode: "cors",

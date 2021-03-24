@@ -97,7 +97,7 @@ function App(props) {
       body: JSON.stringify(trx),
     })
       .then((response) => {
-        return response.json();
+        return response.text();
       })
       .then((data) => {
         alert(data);

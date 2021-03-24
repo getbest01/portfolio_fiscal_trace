@@ -1,0 +1,88 @@
+html, body {
+  font-family: cursive;
+  font-size: 1em;
+  background: lightskyblue;
+  box-sizing: border-box;
+}
+
+.topHead {
+  font-family: cursive;
+  font-size: 1em;
+  margin-left: 720px;
+
+}
+
+/*form*/
+input[type="text"],
+input[type="submit"],
+button,
+select {
+  font-family: cursive;
+  font-size: 1em;
+}
+
+.trxDataType,
+.trxDataDesc,
+.trxDataValue {
+  background-color: white;
+  border: 1px solid black;
+  margin-right: 2px;
+}
+
+.c-cb {
+  display: flex;
+  margin-right: 2px;
+}
+
+.inputType,
+.trxDataType {
+  width: 80px;
+}
+
+.inputDesc,
+.trxDataDesc {
+  width: 300px;
+}
+
+.inputValue,
+.trxDataValue {
+  width: 200px;
+  text-align: right;
+}
+
+/*weather section*/
+.toggle-btn {
+  margin-top: 20px;
+}
+
+fieldset {
+  background-color: lightgreen;
+  width: 800px;
+}
+
+h2 {
+  width: 800px;
+}
+.inputForm {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  max-width: 800px;
+}
+
+.stack-small {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  font-size: 0.8em;
+}
+
+.edit-cell {
+  background-color: lightyellow;
+}

@@ -159,13 +159,15 @@ function App(props) {
   //rendering
   return (
     <div className="trxapp stack-large">
-      <h1>Fiscal Trace</h1>
-      <input
-        type="button"
-        value="Call it a day!"
-        className="topHead"
-        onClick={finishDay}
-      ></input>
+      <div className="heading-pos">
+        <h1>Fiscal Trace</h1>
+        <input
+          type="button"
+          value="Call it a day!"
+          className="topHead"
+          onClick={finishDay}
+        ></input>
+      </div>
       <Form addTrx={addTrx} inputCheck={inputCheck} />
       <div className="filters btn-group stack-exception">
         <fieldset>

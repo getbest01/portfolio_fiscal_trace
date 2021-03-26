@@ -1,12 +1,12 @@
 html, body {
-  font-family: cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   background: lightskyblue;
   box-sizing: border-box;
 }
 
 .topHead {
-  font-family: cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   margin-left: 720px;
 
@@ -17,7 +17,7 @@ input[type="text"],
 input[type="submit"],
 button,
 select {
-  font-family: cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
 

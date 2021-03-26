@@ -111,10 +111,10 @@ function App(props) {
   function inputCheck(inputType, inputDesc, inputValue) {
     let errorCode = "";
     errorCode += inputType === "" ? " inputType is null " : "";
-    errorCode += inputDesc === "" ? " inputDesc is null " : "";
-    errorCode += inputValue === "" ? " inputValue is null " : "";
+    errorCode += inputDesc === "" ? " transaction detail is required " : "";
+    errorCode += inputValue === "" ? " Value is required " : "";
     errorCode += !/^[0-9]*[.]?[0-9]*$/.test(inputValue)
-      ? " inputValue is not number "
+      ? " Value is not number type "
       : "";
     return errorCode;
   }

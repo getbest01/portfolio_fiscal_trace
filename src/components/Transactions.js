@@ -31,7 +31,7 @@ export default function Todo(props) {
   }
 
   function handleSubmit(e) {
-     e.preventDefault();
+    e.preventDefault();
     let errorCode = props.inputCheck(newFiscalType, newDesc, newDolValue);
     if (errorCode.length === 0) {
       props.editTrx(props.id, newFiscalType, newDesc, newDolValue);
@@ -99,7 +99,9 @@ export default function Todo(props) {
       <div className="c-cb">
         <span className="trxDataType">{props.fiscalType}</span>
         <span className="trxDataDesc">{props.desc}</span>
-        <span className="trxDataValue">{props.dolValue}</span>
+        <span className="trxDataValue">{`$ ${parseFloat(
+          props.dolValue
+        ).toLocaleString()}`}</span>
       </div>
       <div className="btn-group">
         <button

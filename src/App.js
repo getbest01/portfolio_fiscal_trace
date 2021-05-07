@@ -154,11 +154,15 @@ function App(props) {
   }
 
   //transaction list information
-  const headingText = `${trxList.length} transaction(s). Total values[ Earned: ${earnedTotal}, Spent: ${spentTotal} ]`;
+  const headingText = `${
+    trxList.length
+  } transaction(s). Total values[ Earned: $${parseFloat(
+    earnedTotal
+  ).toLocaleString()}, Spent: $${parseFloat(spentTotal).toLocaleString()} ]`;
 
   //rendering
   return (
-    <div className="trxapp stack-large">
+    <div className="trxapp">
       <div className="heading-pos">
         <h1>Fiscal Trace</h1>
         <input

@@ -8,6 +8,15 @@ let DATA = [];
 //https://laughing-darwin-718a59.netlify.app/.netlify/functions/api
 //http://localhost:9000/.netlify/functions/api
 
+ReactDOM.render(
+  <>
+    <div className="loader"> loading...</div>
+  </>,
+  document.getElementById("root")
+);
+
+let loading = <div className="loader"> loading...</div>;
+
 fetch(`https://jason-11.herokuapp.com/json/`, {
   headers: {
     Accept: "application/json",
@@ -20,6 +29,8 @@ fetch(`https://jason-11.herokuapp.com/json/`, {
     return response.json();
   })
   .then((data) => {
+    loading = "";
+
     let initTrx = [];
     for (let i = 0; i < data.results.length; i++) {
       initTrx = {
@@ -30,7 +41,13 @@ fetch(`https://jason-11.herokuapp.com/json/`, {
       };
       DATA.push(initTrx);
     }
-    ReactDOM.render(<App trxs={DATA} />, document.getElementById("root"));
+    ReactDOM.render(
+      <>
+        {loading}
+        <App trxs={DATA} />
+      </>,
+      document.getElementById("root")
+    );
   })
   .catch((e) => console.log(e));
 

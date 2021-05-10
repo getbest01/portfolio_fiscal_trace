@@ -20,6 +20,7 @@ body {
 .topHead {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
+  border-radius: 10px;
 }
 
 /*form*/
@@ -86,6 +87,7 @@ fieldset {
   max-width: 800px;
   position: relative;
   border-radius: 10px;
+  margin: 0;
 }
 
 h2 {
@@ -111,7 +113,8 @@ footer {
   font-size: 0.8em;
 }
 
-.edit-cell {
+.edit-cell,
+.inputCell {
   background-color: lightyellow;
 }
 

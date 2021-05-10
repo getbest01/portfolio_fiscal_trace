@@ -5,9 +5,6 @@ import App from "./App";
 
 let DATA = [];
 
-//https://laughing-darwin-718a59.netlify.app/.netlify/functions/api
-//http://localhost:9000/.netlify/functions/api
-
 ReactDOM.render(
   <>
     <div className="loader"> loading...</div>

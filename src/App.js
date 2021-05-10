@@ -167,7 +167,7 @@ function App(props) {
         <h1>Fiscal Trace</h1>
         <input
           type="button"
-          value="Call it a day!"
+          value="DB update"
           className="topHead"
           onClick={finishDay}
         ></input>

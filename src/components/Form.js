@@ -22,8 +22,7 @@ function Form(props) {
       props.addTrx(fiscalType, desc, dolValue);
       setDesc("");
       setDolValue("");
-    }
-    else {
+    } else {
       alert(errorCode);
     }
   }
@@ -37,14 +36,14 @@ function Form(props) {
             onChange={handleChange}
             id="selectType"
             defaultValue="Earned"
-            className="inputType"
+            className="inputCell inputType"
           >
             <option>Earned</option>
             <option>Spent</option>
           </select>
 
           <input
-            className="inputDesc"
+            className="inputCell inputDesc"
             type="text"
             id="fiscal-desc"
             name="desc"
@@ -54,7 +53,7 @@ function Form(props) {
             onChange={handleChange}
           />
           <input
-            className="inputValue"
+            className="inputCell inputValue"
             type="text"
             id="fiscal-dol-value"
             name="dolValue"

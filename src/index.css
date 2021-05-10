@@ -35,8 +35,7 @@ select {
 .trxDataDesc,
 .trxDataValue {
   background-color: white;
-  border: 1px solid black;
-  margin-right: 2px;
+  margin: 0 2px 2px 0;
 }
 
 .c-cb {
@@ -44,16 +43,31 @@ select {
   margin-right: 2px;
 }
 
+.todo-cancel {
+  margin: 0 2px 2px 0;
+  padding: 0;
+  border: 1;
+  height: 26px;
+}
+
 .inputType,
 .trxDataType {
   width: 100px;
   text-align: center;
+  height: 26px;
+  margin: 0 2px 2px 0;
+  padding: 0;
+  border: 0;
 }
 
 .inputDesc,
 .trxDataDesc,
 .edit-cell.inputDesc {
   min-width: 200px;
+  margin: 0 2px 2px 0;
+  padding: 0;
+  border: 0;
+  height: 26px;
 }
 
 .inputValue,
@@ -61,6 +75,9 @@ select {
 .edit-cell.inputValue {
   width: 80px;
   text-align: right;
+  padding: 0;
+  border: 0;
+  height: 26px;
 }
 
 fieldset {

@@ -12,6 +12,7 @@ body {
 }
 
 .heading-pos {
+  min-width: 420px;
   max-width: 800px;
   display: flex;
   justify-content: space-between;
@@ -29,7 +30,7 @@ input[type="submit"],
 button,
 select {
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 0.9rem;
 }
 
 .trxDataType,
@@ -53,22 +54,23 @@ select {
 
 .inputType,
 .trxDataType {
-  width: 100px;
+  width: 80px;
   text-align: center;
   height: 26px;
   margin: 0 2px 2px 0;
   padding: 0;
   border: 0;
+  font-size: 0.9rem;
 }
 
 .inputDesc,
-.trxDataDesc,
-.edit-cell.inputDesc {
-  min-width: 200px;
+.trxDataDesc {
+  width: 120px;
   margin: 0 2px 2px 0;
   padding: 0;
   border: 0;
   height: 26px;
+  font-size: 0.9rem;
 }
 
 .inputValue,
@@ -79,11 +81,13 @@ select {
   padding: 0;
   border: 0;
   height: 26px;
+  font-size: 0.9rem;
 }
 
 fieldset {
   box-sizing: border-box;
   background-color: lightgreen;
+  min-width: 420px;
   max-width: 800px;
   position: relative;
   border-radius: 10px;

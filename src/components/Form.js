@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Form(props) {
-  const [fiscalType, setfiscalType] = useState("Earned");
+  const [fiscalType, setFiscalType] = useState("Earned");
   const [desc, setDesc] = useState("");
   const [dolValue, setDolValue] = useState("");
 
@@ -11,7 +11,7 @@ function Form(props) {
     } else if (e.target.id === "fiscal-dol-value") {
       setDolValue(e.target.value);
     } else if (e.target.id === "selectType") {
-      setfiscalType(e.target.value);
+      setFiscalType(e.target.value);
     }
   }
 

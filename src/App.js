@@ -25,8 +25,8 @@ function App(props) {
   const [filter, setFilter] = useState("All");
   const listHeadingRef = useRef(null);
   const prevTrxLength = usePrevious(trx.length);
-  const [earnedTotal, setEarned] = useState("0");
-  const [spentTotal, setSpent] = useState("0");
+  const [earnedTotal, setEarnedTotal] = useState("0");
+  const [spentTotal, setSpentTotal] = useState("0");
 
   const filterListRadio = FILTER_NAMES.map((fiscalType) => (
     <FilterRadio
@@ -62,25 +62,25 @@ function App(props) {
   //Earned and Soent total calc whenever data changes
   useEffect(() => {
     if (trxList.filter((x) => x.props.fiscalType === "Earned").length > 0) {
-      setEarned(
+      setEarnedTotal(
         trxList
           .filter((x) => x.props.fiscalType === "Earned")
           .map((x) => x.props.dolValue)
           .reduce((a, x) => parseInt(a) + parseInt(x))
       );
     } else {
-      setEarned("0");
+      setEarnedTotal("0");
     }
 
     if (trxList.filter((x) => x.props.fiscalType === "Spent").length > 0) {
-      setSpent(
+      setSpentTotal(
         trxList
           .filter((x) => x.props.fiscalType === "Spent")
           .map((x) => x.props.dolValue)
           .reduce((a, x) => parseInt(a) + parseInt(x))
       );
     } else {
-      setSpent("0");
+      setSpentTotal("0");
     }
   }, [trxList]);
 

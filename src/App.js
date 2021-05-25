@@ -153,13 +153,6 @@ function App(props) {
     setTrx(remainingTrx);
   }
 
-  //transaction list information
-  const headingText = `${
-    trxList.length
-  } transaction(s). Total values[ Earned: $${parseFloat(
-    earnedTotal
-  ).toLocaleString()}, Spent: $${parseFloat(spentTotal).toLocaleString()} ]`;
-
   //rendering
   return (
     <div className="trxapp">
@@ -173,16 +166,23 @@ function App(props) {
         ></input>
       </div>
       <Form addTrx={addTrx} inputCheck={inputCheck} />
-      <div className="filters btn-group stack-exception">
+
+      <div className="filters">
         <fieldset>
           <legend>List filter</legend>
-          {filterListRadio}
+          <div className="class-filter">{filterListRadio}</div>
         </fieldset>
       </div>
-      <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
-        {headingText}
-      </h2>
-
+      <div>
+        <fieldset>
+          <legend>Summary</legend>
+          <div className="summary-bottom">
+            <p>- Number of transactions: {trxList.length}</p>
+            <p>- Total earned: ${parseFloat(earnedTotal).toLocaleString()}</p>
+            <p>- Total spent: ${parseFloat(spentTotal).toLocaleString()}</p>
+          </div>
+        </fieldset>
+      </div>
       <ul
         className="trx-list stack-large stack-exception"
         aria-labelledby="list-heading"

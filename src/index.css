@@ -33,6 +33,10 @@ select {
   font-size: 0.9rem;
 }
 
+.btn-group {
+  display: flex;
+}
+
 .trxDataType,
 .trxDataDesc,
 .trxDataValue {
@@ -45,18 +49,16 @@ select {
   margin-right: 2px;
 }
 
-.todo-cancel {
+.trx-cancel {
   margin: 0 2px 2px 0;
   padding: 0;
   border: 1;
-  height: 26px;
 }
 
 .inputType,
 .trxDataType {
   width: 80px;
   text-align: center;
-  height: 26px;
   margin: 0 2px 2px 0;
   padding: 0;
   border: 0;
@@ -69,7 +71,6 @@ select {
   margin: 0 2px 2px 0;
   padding: 0;
   border: 0;
-  height: 26px;
   font-size: 0.9rem;
 }
 
@@ -80,7 +81,6 @@ select {
   text-align: right;
   padding: 0;
   border: 0;
-  height: 26px;
   font-size: 0.9rem;
 }
 
@@ -88,15 +88,12 @@ fieldset {
   box-sizing: border-box;
   background-color: lightgreen;
   min-width: 420px;
-  max-width: 800px;
+
   position: relative;
   border-radius: 10px;
   margin: 0;
 }
 
-h2 {
-  max-width: 800px;
-}
 .inputForm {
   text-align: center;
 }
@@ -120,6 +117,25 @@ footer {
 .edit-cell,
 .inputCell {
   background-color: lightyellow;
+}
+
+.summary-bottom,
+.class-filter {
+  margin: auto;
+  max-width: 390px;
+}
+
+p {
+  text-align: left;
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: darkblue;
+  font-style: italic;
+}
+
+legend {
+  font-weight: 600;
 }
 
 /*loading animation*/

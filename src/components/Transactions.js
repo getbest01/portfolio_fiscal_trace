@@ -8,7 +8,7 @@ function usePrevious(value) {
   return ref.current;
 }
 
-export default function Todo(props) {
+export default function Transactions(props) {
   const [isEditing, setEditing] = useState(false);
   const [newFiscalType, setFiscalType] = useState("");
   const [newDesc, setDesc] = useState("");
@@ -81,14 +81,14 @@ export default function Todo(props) {
       <div className="btn-group">
         <button
           type="button"
-          className="btn todo-cancel"
+          className="btn trx-cancel"
           onClick={() => {
             setEditing(false);
           }}
         >
           Cancel
         </button>
-        <button type="submit" className="btn btn__primary todo-edit">
+        <button type="submit" className="btn btn__primary trx-edit">
           Save
         </button>
       </div>
@@ -135,5 +135,9 @@ export default function Todo(props) {
     }
   }, [wasEditing, isEditing]);
 
-  return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
+  return (
+    <li className="transaction">
+      {isEditing ? editingTemplate : viewTemplate}
+    </li>
+  );
 }

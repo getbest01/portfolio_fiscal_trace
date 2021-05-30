@@ -55,7 +55,9 @@ function App(props) {
   //# of transactions update
   useEffect(() => {
     if (trx.length - prevTrxLength === -1) {
-      listHeadingRef.current.focus();
+      if (listHeadingRef.current) {
+        listHeadingRef.current.focus();
+      }
     }
   }, [trx.length, prevTrxLength]);
 
